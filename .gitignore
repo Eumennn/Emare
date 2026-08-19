@@ -1,0 +1,17 @@
+# Emare — repoya girmemesi gerekenler
+
+# İç dokümanlar (iş planı, gelir modeli vb.) herkese açık repoya konmamalı
+EcoDetect.zip
+_eco/
+
+# Yerel geliştirme yardımcıları
+sunucu.ps1
+sunucu-baslat.bat
+siteyi-ac.bat
+
+# İşletim sistemi / editör
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

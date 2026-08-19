@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emare — Kameran, temiz bir şehrin kanıtı olsun</title>
+<meta name="description" content="Emare, vatandaşların dashcam, kafa kamerası ve telefonlarıyla kaydettiği çöp atma ihlallerini kanıta dönüştürüp yetkili kurumlara ileten kitle kaynaklı çevre denetim platformudur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scrollbar"><span id="scrollbarFill"></span></div>
+
+<!-- sağdaki özel kaydırma çubuğu (tarayıcınınki gizlendi) -->
+<div class="vscroll" id="vscroll" aria-hidden="true">
+  <span class="vscroll__thumb" id="vscrollThumb"></span>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="logo" href="#hero" aria-label="Emare ana sayfa">
+      <span class="logo__mark">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="16" fill="#2f8f46"/>
+          <path d="M16 23c-3.6 0-6-1.9-6-4.2 0-1.9 1.7-3.2 3.4-4.4 1-.7 1.7-1.6 2.6-1.6s1.6.9 2.6 1.6C20.3 15.6 22 16.9 22 18.8 22 21.1 19.6 23 16 23z" fill="#fff"/>
+          <ellipse cx="10.6" cy="12.6" rx="1.7" ry="2.2" fill="#fff" transform="rotate(-18 10.6 12.6)"/>
+          <ellipse cx="21.4" cy="12.6" rx="1.7" ry="2.2" fill="#fff" transform="rotate(18 21.4 12.6)"/>
+          <ellipse cx="14.4" cy="9.4" rx="1.5" ry="2.1" fill="#fff"/>
+          <ellipse cx="18.8" cy="9.4" rx="1.5" ry="2.1" fill="#fff"/>
+        </svg>
+      </span>
+      <span class="logo__text">Emare</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Ana menü">
+      <a href="#sorun">Neden Emare</a>
+      <a href="#akis">Nasıl Çalışır</a>
+      <a href="#kimler">Kimler Kullanıyor</a>
+      <a href="#kanitlar">Sahadan</a>
+      <a href="#planlar">Kurumlar</a>
+    </nav>
+
+    <div class="nav__right">
+      <button class="lang" id="lang" type="button" aria-label="Dil seçimi">
+        <span class="lang__flag">
+          <svg class="flag flag--tr" viewBox="0 0 24 16" aria-hidden="true">
+            <rect width="24" height="16" fill="#e30a17"/>
+            <circle cx="9.1" cy="8" r="3.9" fill="#fff"/>
+            <circle cx="10.6" cy="8" r="3.1" fill="#e30a17"/>
+            <polygon fill="#fff" points="17.5,8 16,8.59 15.91,10.19 14.89,8.95 13.34,9.35 14.2,8 13.34,6.65 14.89,7.05 15.91,5.81 16,7.41"/>
+          </svg>
+          <svg class="flag flag--en" viewBox="0 0 24 16" aria-hidden="true">
+            <rect width="24" height="16" fill="#012169"/>
+            <path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="3.2"/>
+            <path d="M0 0l24 16M24 0L0 16" stroke="#c8102e" stroke-width="1.6"/>
+            <path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="5.2"/>
+            <path d="M12 0v16M0 8h24" stroke="#c8102e" stroke-width="3.1"/>
+          </svg>
+        </span>
+        <span class="lang__label">TR</span>
+      </button>
+      <a class="btn btn--green nav__cta" href="#iletisim"><span>Bize Ulaşın</span></a>
+      <button class="burger" id="burger" type="button" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#sorun">Neden Emare</a>
+    <a href="#akis">Nasıl Çalışır</a>
+    <a href="#kimler">Kimler Kullanıyor</a>
+    <a href="#kanitlar">Sahadan</a>
+    <a href="#planlar">Kurumlar</a>
+    <a class="btn btn--green btn--full" href="#iletisim"><span>Bize Ulaşın</span></a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <img id="heroImg" src="Emare%20Hero.png" alt="Emare maskotu parkta çöp toplarken, arkada güvenlik kamerası ve temiz şehir tabelası">
+    <div class="hero__scrim"></div>
+  </div>
+
+  <div class="leaves" aria-hidden="true">
+    <svg class="leaf leaf--1" viewBox="0 0 24 24"><path d="M20 4C10 4 4 9 4 16c0 2 .7 3.4.7 3.4S8 12 20 4z" fill="#4caf50"/></svg>
+    <svg class="leaf leaf--2" viewBox="0 0 24 24"><path d="M20 4C10 4 4 9 4 16c0 2 .7 3.4.7 3.4S8 12 20 4z" fill="#77c47a"/></svg>
+    <svg class="leaf leaf--3" viewBox="0 0 24 24"><path d="M20 4C10 4 4 9 4 16c0 2 .7 3.4.7 3.4S8 12 20 4z" fill="#3f9e50"/></svg>
+    <svg class="leaf leaf--4" viewBox="0 0 24 24"><path d="M20 4C10 4 4 9 4 16c0 2 .7 3.4.7 3.4S8 12 20 4z" fill="#8fd08c"/></svg>
+  </div>
+
+  <div class="hero__content">
+    <h1 class="display hero__title">
+      <span class="line"><span>YERE ATILAN ÇÖP</span></span>
+      <span class="line"><span>ARTIK KAMERADAN</span></span>
+      <span class="line"><span>KAÇAMIYOR</span></span>
+    </h1>
+    <p class="hero__sub anim-up" style="--d:.55s">
+      Aracındaki dashcam, kaskındaki kamera ya da cebindeki telefon. Kaydet, 10 saniyeye kırp,
+      gönder. Kanıtın kapalı devre yetkili kuruma ulaşsın, sen EcoPuan kazan.
+    </p>
+    <div class="anim-up" style="--d:.7s">
+      <a class="btn btn--green btn--lg" href="#akis"><span>Kanıtını Yükle</span></a>
+    </div>
+  </div>
+
+  <div class="hero__card anim-up" style="--d:.95s">
+    <span class="hero__card-avatar"><img src="Emare%20Box%201.png" alt=""></span>
+    <span class="hero__card-text">
+      <b>Pilot ilçe başvuruları</b>
+      Belediyeler için ilk 3 ay ücretsiz
+    </span>
+    <span class="pulse-dot"></span>
+  </div>
+</section>
+
+<!-- ============ PROBLEM + DECK ============ -->
+<section class="section problem" id="sorun">
+  <div class="container narrow center">
+    <h2 class="display h2 reveal">KAMERALAR ZATEN KAYITTA,<br>KANIT SİLİNİP GİDİYOR.</h2>
+    <p class="lead reveal" style="--d:.1s">
+      Binlerce araçta dashcam, kuryelerin kaskında kamera var. Ama bu kayıtlar sadece kazalarda
+      kullanılıyor; camdan atılan pet şişe, sokağa dökülen moloz kimsenin gündemine girmeden siliniyor.
+    </p>
+    <div class="reveal" style="--d:.2s">
+      <a class="btn btn--green" href="#akis"><span>Sistem nasıl işliyor?</span></a>
+    </div>
+  </div>
+
+  <div class="deck reveal" style="--d:.15s">
+    <article class="deck__card deck__card--left">
+      <img src="Emare%20Section%203.png" alt="Park içindeki gözetim kamerası">
+      <div class="deck__cap"><b>Kanıt kapalı devre gider</b><span>İfşa yok, sosyal medya yok</span></div>
+    </article>
+
+    <article class="deck__card deck__card--center">
+      <img src="Emare%20Box%201.png" alt="Emare maskotu telefonuyla ihlali kaydediyor">
+      <div class="deck__overlay">
+        <b>Her kanıt tek tek incelenir</b>
+        <span>Flu, okunmayan veya şüpheden ibaret videolar moderasyonda elenir; kurumu yormaz.</span>
+      </div>
+    </article>
+
+    <article class="deck__card deck__card--right">
+      <img src="Emare%20Section%201.png" alt="Izgaraya sıkışmış çöp yığını">
+      <div class="deck__cap"><b>Çöp yığınını haritaya pinle</b><span>Temizlenince pin yeşile döner</span></div>
+    </article>
+  </div>
+
+  <div class="statbar container">
+    <div class="stat reveal"><b class="count" data-to="10" data-suffix=" sn">0</b><span>Kırpılmış kanıt süresi</span></div>
+    <div class="stat reveal" style="--d:.08s"><b class="count" data-to="4" data-suffix=" adım">0</b><span>Yükleme akışı</span></div>
+    <div class="stat reveal" style="--d:.16s"><b class="count" data-to="500" data-suffix=" puan">0</b><span>İşleme alınan ihlal başına</span></div>
+    <div class="stat reveal" style="--d:.24s"><b class="count" data-to="0" data-suffix=" ₺">0</b><span>Vatandaş için maliyet</span></div>
+  </div>
+</section>
+
+<!-- ============ AKIŞ / YÖNTEM ============ -->
+<section class="section split" id="akis">
+  <div class="container grid-2">
+    <div class="card-white reveal">
+      <h3 class="h3">Bir ihbar adım adım nasıl işliyor?</h3>
+      <p class="muted small">Yapay zekâ tespiti yok. Sistem, vatandaşın bilinçli beyanı ve devletin hızlı aksiyonu üzerine kurulu.</p>
+      <ol class="steps">
+        <li><span class="steps__no">1</span><div><b>Yükle</b> — Dashcam ya da kafa kamerasındaki videoyu galeriden seç.</div></li>
+        <li><span class="steps__no">2</span><div><b>Kırp</b> — Uygulama içinde sadece ihlalin ve plakanın net göründüğü 10 saniyeyi bırak.</div></li>
+        <li><span class="steps__no">3</span><div><b>Moderasyon</b> — Emare ekibi kanıtı inceler; yetersizse nedeniyle birlikte sana döner.</div></li>
+        <li><span class="steps__no">4</span><div><b>Kurum işlemi</b> — Zabıta ya da emniyet cezayı yazar, panelde işaretler, puanın anında yatar.</div></li>
+      </ol>
+      <figure class="card-white__figure">
+        <img src="Emare%20Section%202.png" alt="Emare maskotu yoldaki pet şişeyi geri dönüşüm poşetine koyuyor">
+      </figure>
+    </div>
+
+    <div class="method">
+      <h2 class="display h2 reveal">KANITIN<br>ARKASINDAKİ<br>YÖNTEM</h2>
+      <p class="lead reveal" style="--d:.1s">
+        Video arka planda yüklenir, EXIF ve GPS verisi konumla çapraz doğrulanır, metadata
+        tutarsızsa moderatör uyarılır. Kurum panelleri IP kısıtlamalı ve 2FA korumalıdır.
+        İhbarcının kimliği ihlali yapanla <b>asla</b> paylaşılmaz.
+      </p>
+      <div class="reveal" style="--d:.2s">
+        <a class="btn btn--green" href="#planlar"><span>Yöntemi incele</span></a>
+      </div>
+      <div class="chips reveal" style="--d:.3s">
+        <span class="chip">SMS (OTP) doğrulama</span>
+        <span class="chip">EXIF &amp; GPS kontrolü</span>
+        <span class="chip">KVKK uyumlu saklama</span>
+        <span class="chip">İfşa yok, kapalı devre</span>
+        <span class="chip">Arka planda yükleme</span>
+        <span class="chip">Isı haritası analizi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDE BAND ============ -->
+<section class="band" aria-label="Kaydet, bildir, kazan">
+  <img class="band__img" src="Emare%20Slide.png" alt="Emare maskotu çöp maşası ve geri dönüşüm poşetiyle">
+  <div class="band__text">
+    <span class="kicker">Emare döngüsü</span>
+    <h2 class="display">KAYDET. BİLDİR.<br>TEMİZLENSİN. KAZAN.</h2>
+  </div>
+</section>
+
+<!-- ============ KİMLER KULLANIYOR ============ -->
+<section class="section people" id="kimler">
+  <div class="container grid-2 grid-2--tight">
+    <div class="people__left">
+      <h2 class="display h2 reveal">SİSTEMİ AYAKTA<br>TUTAN KİTLE</h2>
+      <p class="lead reveal" style="--d:.1s">
+        Platformu besleyen kaynak, gün boyu kayıt halinde olan insanlar. Onlar için tek bir hedef var:
+        çevreyi kirleten cezasız kalmasın, sokak temizlensin.
+      </p>
+      <div class="reveal" style="--d:.2s">
+        <a class="btn btn--outline" href="#kanitlar"><span>Sahadan örnekler</span></a>
+      </div>
+    </div>
+
+    <div class="persona reveal" style="--d:.1s">
+      <div class="persona__tabs" role="tablist">
+        <button class="ptab is-active" role="tab" type="button" data-p="0">Kurye</button>
+        <button class="ptab" role="tab" type="button" data-p="1">Taksi</button>
+        <button class="ptab" role="tab" type="button" data-p="2">Yaya</button>
+        <button class="ptab" role="tab" type="button" data-p="3">STK</button>
+        <button class="ptab" role="tab" type="button" data-p="4">Kurum</button>
+      </div>
+
+      <div class="persona__cards">
+        <article class="pcard is-active" data-p="0">
+          <span class="pcard__badge">Odak kitle</span>
+          <div class="pcard__media"><img src="Emare%20Box%201.png" alt=""></div>
+          <div class="pcard__body">
+            <h4>Motokuryeler &amp; motovlogcular</h4>
+            <p>Kask kamerasıyla tüm gün trafikte. Camdan atılan çöpe en çok maruz kalan, en çok net görüntü yakalayan grup.</p>
+            <div class="pcard__stats">
+              <div><b>8-10 sa</b><span>Günlük kayıt</span></div>
+              <div><b>10 sn</b><span>Kırpılan an</span></div>
+              <div><b>Lider</b><span>Haftalık tablo</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-p="1">
+          <span class="pcard__badge">Dashcam</span>
+          <div class="pcard__media"><img src="Emare%20Hero.png" alt=""></div>
+          <div class="pcard__body">
+            <h4>Taksiciler &amp; uzun yol şoförleri</h4>
+            <p>Araç kamerası zaten var, kayıt zaten dönüyor. Gün sonunda Wi-Fi ile telefona alınan klipler birkaç dokunuşla kanıta dönüşüyor.</p>
+            <div class="pcard__stats">
+              <div><b>3-5 dk</b><span>Kamera blokları</span></div>
+              <div><b>Otomatik</b><span>Konum okuma</span></div>
+              <div><b>Ek puan</b><span>Sürerken kazanç</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-p="2">
+          <span class="pcard__badge">Anında kayıt</span>
+          <div class="pcard__media"><img src="Emare%20Box%202.png" alt=""></div>
+          <div class="pcard__body">
+            <h4>Yayalar &amp; mahalle sakinleri</h4>
+            <p>Uygulama açılır açılmaz kocaman bir "Hemen Kaydet" butonu. İhlal anı kaçmadan kamera saniyeler içinde devrede.</p>
+            <div class="pcard__stats">
+              <div><b>1 dokunuş</b><span>Kamera açılışı</span></div>
+              <div><b>Harita</b><span>Yığın bildirimi</span></div>
+              <div><b>Ödül</b><span>Puan mağazası</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-p="3">
+          <span class="pcard__badge">Gönüllü</span>
+          <div class="pcard__media"><img src="Emare%20Section%202.png" alt=""></div>
+          <div class="pcard__body">
+            <h4>Çevre gönüllüleri &amp; STK'lar</h4>
+            <p>Haritadaki kırmızı pine gidip temizlik yapan gruplar, öncesi / sonrası çifte kanıtla normalin çok üzerinde EcoPuan kazanıyor.</p>
+            <div class="pcard__stats">
+              <div><b>Öncesi</b><span>+ sonrası kanıt</span></div>
+              <div><b>Yüksek</b><span>Puan çarpanı</span></div>
+              <div><b>Ekip</b><span>Grup rozetleri</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-p="4">
+          <span class="pcard__badge">B2G panel</span>
+          <div class="pcard__media"><img src="Emare%20Section%203.png" alt=""></div>
+          <div class="pcard__body">
+            <h4>Zabıta, çevre polisi &amp; belediye</h4>
+            <p>Moderasyondan geçmiş, konumlu ve net kanıtlar tek panelde. Memur cezayı kendi resmi sisteminden yazar, panelde durumu işaretler.</p>
+            <div class="pcard__stats">
+              <div><b>2FA + IP</b><span>Erişim güvenliği</span></div>
+              <div><b>Isı haritası</b><span>Kavşak analizi</span></div>
+              <div><b>Daha az</b><span>Devriye maliyeti</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAHADAN / PANO ============ -->
+<section class="board" id="kanitlar">
+  <div class="board__chalk" aria-hidden="true">
+    <span style="top:9%;left:5%">♻</span>
+    <span style="top:20%;left:41%">EcoPuan +500</span>
+    <span style="top:63%;left:7%">34 XX 123</span>
+    <span style="top:80%;left:60%">GPS 41.02, 28.99</span>
+    <span style="top:13%;left:79%">pin ⚑</span>
+    <span style="top:47%;left:88%">10 sn</span>
+    <span style="top:88%;left:31%">♻</span>
+  </div>
+
+  <div class="board__inner">
+    <figure class="polaroid p1"><img src="Emare%20Box%202.png" alt=""><figcaption>Selin, 24<br>Gönüllü — İzmir</figcaption></figure>
+    <figure class="polaroid p2"><img src="Emare%20Section%201.png" alt=""><figcaption>Izgara ağzı<br>Bildirildi</figcaption></figure>
+    <figure class="polaroid p3"><img src="Emare%20Section%202.png" alt=""><figcaption>Park yolu<br>Temizlendi</figcaption></figure>
+    <figure class="polaroid p4"><img src="Emare%20Box%201.png" alt=""><figcaption>Kanıt kaydı<br>10 sn kırpma</figcaption></figure>
+    <figure class="polaroid p5"><img src="Emare%20Section%203.png" alt=""><figcaption>Kurum paneli<br>İşlem yapıldı</figcaption></figure>
+    <figure class="polaroid p6"><img src="Emare%20Hero.png" alt=""><figcaption>Sahil bandı<br>Pilot bölge</figcaption></figure>
+
+    <div class="board__note">
+      <h2 class="display">SAHADAN GELEN<br>KANITLAR</h2>
+      <p>Kimse ifşa edilmiyor, kimse hedef gösterilmiyor. Görüntü yalnızca yetkili kuruma gidiyor; geriye
+      temizlenmiş bir sokak ve cebine yatan puan kalıyor.</p>
+      <a class="btn btn--green" href="#iletisim"><span>Bize Ulaşın</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANLAR ============ -->
+<section class="section pricing" id="planlar">
+  <div class="container">
+    <h2 class="display h2 reveal">KURUMLAR İÇİN ESNEK PLANLAR</h2>
+    <p class="lead lead--left reveal" style="--d:.08s">Lisans maliyetini ilk aydan çıkaran bir denetim ağı.</p>
+
+    <div class="plans">
+      <article class="plan reveal">
+        <div class="plan__box">
+          <span>ihbar</span><b>→</b><span>moderasyon</span><b>→</b><span>kurum</span>
+          <em>tek ilçe · 3 ay</em>
+        </div>
+        <h3>Pilot Bölge</h3>
+        <p class="plan__for">Tek mahalle veya ilçede caydırıcılığı ölçmek isteyen belediyeler için.</p>
+        <div class="plan__price">₺0<small>/ 3 ay</small></div>
+        <ul class="plan__list">
+          <li>1 ilçe, aylık 500 kanıta kadar</li>
+          <li>Vatandaş mobil uygulaması</li>
+          <li>Harita modülü ve çöp yığını pinleri</li>
+          <li>Manuel moderasyon dahil</li>
+          <li>Aylık özet raporu</li>
+          <li class="sub">Lansman PR desteği ve mahalle bilgilendirme materyalleri</li>
+        </ul>
+        <div class="plan__foot"><span>Kurulum ücretsiz</span><a class="btn btn--green btn--sm" href="#iletisim"><span>Bize Ulaşın</span></a></div>
+      </article>
+
+      <article class="plan plan--hot reveal" style="--d:.1s">
+        <span class="plan__star" aria-hidden="true">★</span>
+        <div class="plan__box">
+          <span>kanıt</span><b>→</b><span>ceza paneli</span><b>→</b><span>EcoPuan</span>
+          <em>tam B2G kurulum</em>
+        </div>
+        <h3>Belediye</h3>
+        <p class="plan__for">Zabıta ve çevre polisinin günlük operasyonuna giren tam sürüm.</p>
+        <div class="plan__price">₺24.900<small>/ ay</small></div>
+        <ul class="plan__list">
+          <li>Sınırsız kanıt yükleme</li>
+          <li>B2G resmi işlem paneli</li>
+          <li>2FA, IP kısıtlama, rol tabanlı erişim</li>
+          <li>EXIF / GPS çapraz doğrulama</li>
+          <li>Öncelikli moderasyon (4 saat)</li>
+          <li>Isı haritaları ve kavşak analizleri</li>
+          <li>EcoPuan ödül ağı entegrasyonu</li>
+          <li class="sub">Marka sponsorluklarıyla ödül havuzunun büyütülmesi</li>
+        </ul>
+        <div class="plan__foot"><span>≈ ₺12 / işlenen kanıt</span><a class="btn btn--green btn--sm" href="#iletisim"><span>Bize Ulaşın</span></a></div>
+      </article>
+
+      <article class="plan reveal" style="--d:.2s">
+        <div class="plan__box">
+          <span>il geneli</span><b>→</b><span>API</span><b>→</b><span>DaaS rapor</span>
+          <em>çoklu kurum</em>
+        </div>
+        <h3>Metropol &amp; Bakanlık</h3>
+        <p class="plan__for">Birden çok ilçeyi tek çatıdan yöneten büyükşehir ve ulusal kurumlar için.</p>
+        <div class="plan__price">₺59.900<small>/ ay</small></div>
+        <ul class="plan__list">
+          <li>Çoklu ilçe / il yönetimi</li>
+          <li>Kurum sistemlerine API entegrasyonu</li>
+          <li>Toplu yükleme portalı (kurye ve taksi filoları)</li>
+          <li>Şehir planlama ve DaaS raporları</li>
+          <li>Özel SLA ve 7/24 destek</li>
+          <li>Yerinde personel eğitimi</li>
+          <li>ESG / karbon raporlama altyapısı</li>
+          <li class="sub">Ulusal denetim ağı protokolleri için hukuki danışmanlık</li>
+        </ul>
+        <div class="plan__foot"><span>Ölçeğe göre teklif</span><a class="btn btn--green btn--sm" href="#iletisim"><span>Bize Ulaşın</span></a></div>
+      </article>
+    </div>
+    <p class="plans__note">Fiyatlar temsilidir; kurum ölçeği, ilçe sayısı ve beklenen kanıt hacmine göre belirlenir. Vatandaşlar için platform her koşulda ücretsizdir.</p>
+  </div>
+</section>
+
+<!-- ============ SON CTA ============ -->
+<section class="cta" id="iletisim">
+  <div class="container">
+    <h2 class="display h2 reveal">SOKAĞINIZDA GERÇEK<br>BİR DEĞİŞİM GÖRÜN</h2>
+    <p class="lead lead--left reveal" style="--d:.08s">
+      Pilot bölge görüşmesi ücretsiz. Kurumunuz için 20 dakikalık bir demo yeter;
+      ilk kanıtın panele düşmesi bir haftadan kısa sürüyor.
+    </p>
+    <div class="reveal" style="--d:.16s">
+      <a class="btn btn--green btn--lg" href="mailto:merhaba@Emare.app"><span>Bize Ulaşın</span></a>
+    </div>
+  </div>
+  <div class="cta__art">
+    <img src="Emare%20Bottom.png" alt="Parkta oturan Emare maskotu ve yanındaki kuş">
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__top">
+    <a class="logo logo--light" href="#hero">
+      <span class="logo__mark">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="16" fill="#ffffff"/>
+          <path d="M16 23c-3.6 0-6-1.9-6-4.2 0-1.9 1.7-3.2 3.4-4.4 1-.7 1.7-1.6 2.6-1.6s1.6.9 2.6 1.6C20.3 15.6 22 16.9 22 18.8 22 21.1 19.6 23 16 23z" fill="#1f4d33"/>
+          <ellipse cx="10.6" cy="12.6" rx="1.7" ry="2.2" fill="#1f4d33" transform="rotate(-18 10.6 12.6)"/>
+          <ellipse cx="21.4" cy="12.6" rx="1.7" ry="2.2" fill="#1f4d33" transform="rotate(18 21.4 12.6)"/>
+          <ellipse cx="14.4" cy="9.4" rx="1.5" ry="2.1" fill="#1f4d33"/>
+          <ellipse cx="18.8" cy="9.4" rx="1.5" ry="2.1" fill="#1f4d33"/>
+        </svg>
+      </span>
+      <span class="logo__text">Emare</span>
+    </a>
+
+    <div class="socials" aria-label="Sosyal medya">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1"/></svg></a>
+      <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l7.2 9.2L4.4 20h2.3l5.4-5.9L16.6 20H20l-7.5-9.6L19.4 4h-2.3l-5 5.5L8 4z"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.3 9.4l5 2.6-5 2.6z"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 10v7M7.5 7.1v.1M11.5 17v-4a2.2 2.2 0 014.4 0v4"/></svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 4v9.4a3.1 3.1 0 11-2.6-3.05"/><path d="M14 6.2c.7 1.6 2 2.6 3.9 2.7"/></svg></a>
+      <a href="#" aria-label="E-posta"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></a>
+    </div>
+
+    <a class="btn btn--white" href="mailto:merhaba@Emare.app"><span>Bize Ulaşın</span></a>
+  </div>
+
+  <div class="container footer__bottom">
+    <span>© 2026 Emare — Çöp Atma Tespit ve Ödüllendirme Platformu</span>
+    <nav class="footer__links">
+      <a href="#sorun">Neden Emare</a>
+      <a href="#akis">Nasıl Çalışır</a>
+      <a href="#kimler">Kimler Kullanıyor</a>
+      <a href="#planlar">Kurumlar</a>
+      <a href="#">Gizlilik &amp; KVKK</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

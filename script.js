@@ -254,10 +254,15 @@
 
   /* ---------- number counters ---------- */
   var counters = document.querySelectorAll('.count');
+  function isEn() {
+    return !!(window.EMARE_I18N && window.EMARE_I18N.lang === 'en');
+  }
+
   function runCount(el) {
     var to = parseFloat(el.dataset.to || '0');
     var prefix = el.dataset.prefix || '';
-    var suffix = el.dataset.suffix || '';
+    var locale = isEn() ? 'en-US' : 'tr-TR';
+    var suffix = (isEn() ? el.dataset.suffixEn : el.dataset.suffix) || '';
     if (reduced || to === 0) {
       el.textContent = prefix + to + suffix;
       return;
@@ -267,7 +272,7 @@
       if (start === null) start = ts;
       var p = Math.min((ts - start) / dur, 1);
       var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = prefix + Math.round(to * eased).toLocaleString('tr-TR') + suffix;
+      el.textContent = prefix + Math.round(to * eased).toLocaleString(locale) + suffix;
       if (p < 1) window.requestAnimationFrame(step);
     }
     window.requestAnimationFrame(step);
@@ -373,13 +378,5 @@
     sections.forEach(function (s) { sio.observe(s); });
   }
 
-  /* ---------- language chip (flag + label toggle) ---------- */
-  var lang = document.getElementById('lang');
-  if (lang) {
-    var label = lang.querySelector('.lang__label');
-    lang.addEventListener('click', function () {
-      var en = lang.classList.toggle('is-en');
-      label.textContent = en ? 'EN' : 'TR';
-    });
-  }
+  /* dil değiştirme i18n.js içinde yönetiliyor */
 })();

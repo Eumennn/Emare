@@ -22,7 +22,7 @@
 <!-- ============ NAVBAR ============ -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a class="logo" href="#hero" aria-label="Emare ana sayfa">
+    <a class="logo" href="#hero" aria-label="Emare">
       <span class="logo__mark">
         <svg viewBox="0 0 32 32" aria-hidden="true">
           <circle cx="16" cy="16" r="16" fill="#2f8f46"/>
@@ -37,15 +37,15 @@
     </a>
 
     <nav class="nav__links" aria-label="Ana menü">
-      <a href="#sorun">Neden Emare</a>
-      <a href="#akis">Nasıl Çalışır</a>
-      <a href="#kimler">Kimler Kullanıyor</a>
-      <a href="#kanitlar">Sahadan</a>
-      <a href="#planlar">Kurumlar</a>
+      <a href="#sorun" data-i18n="nav.why">Neden Emare</a>
+      <a href="#akis" data-i18n="nav.how">Nasıl Çalışır</a>
+      <a href="#kimler" data-i18n="nav.who">Kimler Kullanıyor</a>
+      <a href="#kanitlar" data-i18n="nav.field">Sahadan</a>
+      <a href="#planlar" data-i18n="nav.orgs">Kurumlar</a>
     </nav>
 
     <div class="nav__right">
-      <button class="lang" id="lang" type="button" aria-label="Dil seçimi">
+      <button class="lang" id="lang" type="button" aria-label="Dil / Language">
         <span class="lang__flag">
           <svg class="flag flag--tr" viewBox="0 0 24 16" aria-hidden="true">
             <rect width="24" height="16" fill="#e30a17"/>
@@ -63,26 +63,27 @@
         </span>
         <span class="lang__label">TR</span>
       </button>
-      <a class="btn btn--green nav__cta" href="#iletisim"><span>Bize Ulaşın</span></a>
+      <a class="btn btn--green nav__cta" href="#iletisim"><span data-i18n="cta.contact">Bize Ulaşın</span></a>
       <button class="burger" id="burger" type="button" aria-label="Menü" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#sorun">Neden Emare</a>
-    <a href="#akis">Nasıl Çalışır</a>
-    <a href="#kimler">Kimler Kullanıyor</a>
-    <a href="#kanitlar">Sahadan</a>
-    <a href="#planlar">Kurumlar</a>
-    <a class="btn btn--green btn--full" href="#iletisim"><span>Bize Ulaşın</span></a>
+    <a href="#sorun" data-i18n="nav.why">Neden Emare</a>
+    <a href="#akis" data-i18n="nav.how">Nasıl Çalışır</a>
+    <a href="#kimler" data-i18n="nav.who">Kimler Kullanıyor</a>
+    <a href="#kanitlar" data-i18n="nav.field">Sahadan</a>
+    <a href="#planlar" data-i18n="nav.orgs">Kurumlar</a>
+    <a class="btn btn--green btn--full" href="#iletisim"><span data-i18n="cta.contact">Bize Ulaşın</span></a>
   </div>
 </header>
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
   <div class="hero__media">
-    <img id="heroImg" src="Emare%20Hero.png" alt="Emare maskotu parkta çöp toplarken, arkada güvenlik kamerası ve temiz şehir tabelası">
+    <img id="heroImg" src="Emare%20Hero.png" data-i18n-alt="alt.hero"
+         alt="Emare maskotu parkta çöp toplarken, arkada güvenlik kamerası ve temiz şehir tabelası">
     <div class="hero__scrim"></div>
   </div>
 
@@ -95,17 +96,17 @@
 
   <div class="hero__content">
     <h1 class="display hero__title">
-      <span class="line"><span>YERE ATILAN ÇÖP</span></span>
-      <span class="line"><span>ARTIK KAMERADAN</span></span>
-      <span class="line"><span>KAÇAMIYOR</span></span>
+      <span class="line"><span data-i18n="hero.l1">YERE ATILAN ÇÖP</span></span>
+      <span class="line"><span data-i18n="hero.l2">ARTIK KAMERADAN</span></span>
+      <span class="line"><span data-i18n="hero.l3">KAÇAMIYOR</span></span>
     </h1>
 
-    <p class="hero__sub anim-up" style="--d:.55s">
+    <p class="hero__sub anim-up" style="--d:.55s" data-i18n="hero.sub">
       Aracındaki dashcam, kaskındaki kamera ya da cebindeki telefon. Kaydet, 10 saniyeye kırp,
       gönder. Kanıtın kapalı devre yetkili kuruma ulaşsın, sen EcoPuan kazan.
     </p>
     <div class="anim-up" style="--d:.7s">
-      <a class="btn btn--green btn--lg" href="#akis"><span>Kanıtını Yükle</span></a>
+      <a class="btn btn--green btn--lg" href="#akis"><span data-i18n="hero.cta">Kanıtını Yükle</span></a>
     </div>
   </div>
 
@@ -114,41 +115,41 @@
 <!-- ============ PROBLEM + DECK ============ -->
 <section class="section problem" id="sorun">
   <div class="container narrow center">
-    <h2 class="display h2 reveal">KAMERALAR ZATEN KAYITTA,<br>KANIT SİLİNİP GİDİYOR.</h2>
-    <p class="lead reveal" style="--d:.1s">
+    <h2 class="display h2 reveal" data-i18n="prob.title">KAMERALAR ZATEN KAYITTA,<br>KANIT SİLİNİP GİDİYOR.</h2>
+    <p class="lead reveal" style="--d:.1s" data-i18n="prob.lead">
       Binlerce araçta dashcam, kuryelerin kaskında kamera var. Ama bu kayıtlar sadece kazalarda
       kullanılıyor; camdan atılan pet şişe, sokağa dökülen moloz kimsenin gündemine girmeden siliniyor.
     </p>
     <div class="reveal" style="--d:.2s">
-      <a class="btn btn--green" href="#akis"><span>Sistem nasıl işliyor?</span></a>
+      <a class="btn btn--green" href="#akis"><span data-i18n="prob.cta">Sistem nasıl işliyor?</span></a>
     </div>
   </div>
 
   <div class="deck reveal" style="--d:.15s">
     <article class="deck__card deck__card--left">
-      <img src="Emare%20Section%203.png" alt="Park içindeki gözetim kamerası">
-      <div class="deck__cap"><b>Kanıt kapalı devre gider</b><span>İfşa yok, sosyal medya yok</span></div>
+      <img src="Emare%20Section%203.png" data-i18n-alt="alt.cam" alt="Park içindeki gözetim kamerası">
+      <div class="deck__cap"><b data-i18n="deck1.t">Kanıt kapalı devre gider</b><span data-i18n="deck1.s">İfşa yok, sosyal medya yok</span></div>
     </article>
 
     <article class="deck__card deck__card--center">
-      <img src="Emare%20Box%201.png" alt="Emare maskotu telefonuyla ihlali kaydediyor">
+      <img src="Emare%20Box%201.png" data-i18n-alt="alt.record" alt="Emare maskotu telefonuyla ihlali kaydediyor">
       <div class="deck__overlay">
-        <b>Her kanıt tek tek incelenir</b>
-        <span>Flu, okunmayan veya şüpheden ibaret videolar moderasyonda elenir; kurumu yormaz.</span>
+        <b data-i18n="deck2.t">Her kanıt tek tek incelenir</b>
+        <span data-i18n="deck2.s">Flu, okunmayan veya şüpheden ibaret videolar moderasyonda elenir; kurumu yormaz.</span>
       </div>
     </article>
 
     <article class="deck__card deck__card--right">
-      <img src="Emare%20Section%201.png" alt="Izgaraya sıkışmış çöp yığını">
-      <div class="deck__cap"><b>Çöp yığınını haritaya pinle</b><span>Temizlenince pin yeşile döner</span></div>
+      <img src="Emare%20Section%201.png" data-i18n-alt="alt.dump" alt="Izgaraya sıkışmış çöp yığını">
+      <div class="deck__cap"><b data-i18n="deck3.t">Çöp yığınını haritaya pinle</b><span data-i18n="deck3.s">Temizlenince pin yeşile döner</span></div>
     </article>
   </div>
 
   <div class="statbar container">
-    <div class="stat reveal"><b class="count" data-to="10" data-suffix=" sn">0</b><span>Kırpılmış kanıt süresi</span></div>
-    <div class="stat reveal" style="--d:.08s"><b class="count" data-to="4" data-suffix=" adım">0</b><span>Yükleme akışı</span></div>
-    <div class="stat reveal" style="--d:.16s"><b class="count" data-to="500" data-suffix=" puan">0</b><span>İşleme alınan ihlal başına</span></div>
-    <div class="stat reveal" style="--d:.24s"><b class="count" data-to="0" data-suffix=" ₺">0</b><span>Vatandaş için maliyet</span></div>
+    <div class="stat reveal"><b class="count" data-to="10" data-suffix=" sn" data-suffix-en=" sec">0</b><span data-i18n="stat1">Kırpılmış kanıt süresi</span></div>
+    <div class="stat reveal" style="--d:.08s"><b class="count" data-to="4" data-suffix=" adım" data-suffix-en=" steps">0</b><span data-i18n="stat2">Yükleme akışı</span></div>
+    <div class="stat reveal" style="--d:.16s"><b class="count" data-to="500" data-suffix=" puan" data-suffix-en=" points">0</b><span data-i18n="stat3">İşleme alınan ihlal başına</span></div>
+    <div class="stat reveal" style="--d:.24s"><b class="count" data-to="0" data-suffix=" ₺" data-suffix-en=" ₺">0</b><span data-i18n="stat4">Vatandaş için maliyet</span></div>
   </div>
 </section>
 
@@ -156,36 +157,36 @@
 <section class="section split" id="akis">
   <div class="container grid-2">
     <div class="card-white reveal">
-      <h3 class="h3">Bir ihbar adım adım nasıl işliyor?</h3>
-      <p class="muted small">Yapay zekâ tespiti yok. Sistem, vatandaşın bilinçli beyanı ve devletin hızlı aksiyonu üzerine kurulu.</p>
+      <h3 class="h3" data-i18n="flow.title">Bir ihbar adım adım nasıl işliyor?</h3>
+      <p class="muted small" data-i18n="flow.note">Yapay zekâ tespiti yok. Sistem, vatandaşın bilinçli beyanı ve devletin hızlı aksiyonu üzerine kurulu.</p>
       <ol class="steps">
-        <li><span class="steps__no">1</span><div><b>Yükle</b> — Dashcam ya da kafa kamerasındaki videoyu galeriden seç.</div></li>
-        <li><span class="steps__no">2</span><div><b>Kırp</b> — Uygulama içinde sadece ihlalin ve plakanın net göründüğü 10 saniyeyi bırak.</div></li>
-        <li><span class="steps__no">3</span><div><b>Moderasyon</b> — Emare ekibi kanıtı inceler; yetersizse nedeniyle birlikte sana döner.</div></li>
-        <li><span class="steps__no">4</span><div><b>Kurum işlemi</b> — Zabıta ya da emniyet cezayı yazar, panelde işaretler, puanın anında yatar.</div></li>
+        <li><span class="steps__no">1</span><div data-i18n="flow.s1"><b>Yükle</b> — Dashcam ya da kafa kamerasındaki videoyu galeriden seç.</div></li>
+        <li><span class="steps__no">2</span><div data-i18n="flow.s2"><b>Kırp</b> — Uygulama içinde sadece ihlalin ve plakanın net göründüğü 10 saniyeyi bırak.</div></li>
+        <li><span class="steps__no">3</span><div data-i18n="flow.s3"><b>Moderasyon</b> — Emare ekibi kanıtı inceler; yetersizse nedeniyle birlikte sana döner.</div></li>
+        <li><span class="steps__no">4</span><div data-i18n="flow.s4"><b>Kurum işlemi</b> — Zabıta ya da emniyet cezayı yazar, panelde işaretler, puanın anında yatar.</div></li>
       </ol>
       <figure class="card-white__figure">
-        <img src="Emare%20Section%202.png" alt="Emare maskotu yoldaki pet şişeyi geri dönüşüm poşetine koyuyor">
+        <img src="Emare%20Section%202.png" data-i18n-alt="alt.pick" alt="Emare maskotu yoldaki pet şişeyi geri dönüşüm poşetine koyuyor">
       </figure>
     </div>
 
     <div class="method">
-      <h2 class="display h2 reveal">KANITIN<br>ARKASINDAKİ<br>YÖNTEM</h2>
-      <p class="lead reveal" style="--d:.1s">
+      <h2 class="display h2 reveal" data-i18n="method.title">KANITIN<br>ARKASINDAKİ<br>YÖNTEM</h2>
+      <p class="lead reveal" style="--d:.1s" data-i18n="method.lead">
         Video arka planda yüklenir, EXIF ve GPS verisi konumla çapraz doğrulanır, metadata
         tutarsızsa moderatör uyarılır. Kurum panelleri IP kısıtlamalı ve 2FA korumalıdır.
         İhbarcının kimliği ihlali yapanla <b>asla</b> paylaşılmaz.
       </p>
       <div class="reveal" style="--d:.2s">
-        <a class="btn btn--green" href="#planlar"><span>Yöntemi incele</span></a>
+        <a class="btn btn--green" href="#planlar"><span data-i18n="method.cta">Yöntemi incele</span></a>
       </div>
       <div class="chips reveal" style="--d:.3s">
-        <span class="chip">SMS (OTP) doğrulama</span>
-        <span class="chip">EXIF &amp; GPS kontrolü</span>
-        <span class="chip">KVKK uyumlu saklama</span>
-        <span class="chip">İfşa yok, kapalı devre</span>
-        <span class="chip">Arka planda yükleme</span>
-        <span class="chip">Isı haritası analizi</span>
+        <span class="chip" data-i18n="chip1">SMS (OTP) doğrulama</span>
+        <span class="chip" data-i18n="chip2">EXIF &amp; GPS kontrolü</span>
+        <span class="chip" data-i18n="chip3">KVKK uyumlu saklama</span>
+        <span class="chip" data-i18n="chip4">İfşa yok, kapalı devre</span>
+        <span class="chip" data-i18n="chip5">Arka planda yükleme</span>
+        <span class="chip" data-i18n="chip6">Isı haritası analizi</span>
       </div>
     </div>
   </div>
@@ -193,10 +194,10 @@
 
 <!-- ============ SLIDE BAND ============ -->
 <section class="band" aria-label="Kaydet, bildir, kazan">
-  <img class="band__img" src="Emare%20Slide.png" alt="Emare maskotu çöp maşası ve geri dönüşüm poşetiyle">
+  <img class="band__img" src="Emare%20Slide.png" data-i18n-alt="alt.band" alt="Emare maskotu çöp maşası ve geri dönüşüm poşetiyle">
   <div class="band__text">
-    <span class="kicker">Emare döngüsü</span>
-    <h2 class="display">KAYDET. BİLDİR.<br>TEMİZLENSİN. KAZAN.</h2>
+    <span class="kicker" data-i18n="band.kicker">Emare döngüsü</span>
+    <h2 class="display" data-i18n="band.title">KAYDET. BİLDİR.<br>TEMİZLENSİN. KAZAN.</h2>
   </div>
 </section>
 
@@ -204,92 +205,92 @@
 <section class="section people" id="kimler">
   <div class="container grid-2 grid-2--tight">
     <div class="people__left">
-      <h2 class="display h2 reveal">SİSTEMİ AYAKTA<br>TUTAN KİTLE</h2>
-      <p class="lead reveal" style="--d:.1s">
+      <h2 class="display h2 reveal" data-i18n="people.title">SİSTEMİ AYAKTA<br>TUTAN KİTLE</h2>
+      <p class="lead reveal" style="--d:.1s" data-i18n="people.lead">
         Platformu besleyen kaynak, gün boyu kayıt halinde olan insanlar. Onlar için tek bir hedef var:
         çevreyi kirleten cezasız kalmasın, sokak temizlensin.
       </p>
       <div class="reveal" style="--d:.2s">
-        <a class="btn btn--outline" href="#kanitlar"><span>Sahadan örnekler</span></a>
+        <a class="btn btn--outline" href="#kanitlar"><span data-i18n="people.cta">Sahadan örnekler</span></a>
       </div>
     </div>
 
     <div class="persona reveal" style="--d:.1s">
       <div class="persona__tabs" role="tablist">
-        <button class="ptab is-active" role="tab" type="button" data-p="0">Kurye</button>
-        <button class="ptab" role="tab" type="button" data-p="1">Taksi</button>
-        <button class="ptab" role="tab" type="button" data-p="2">Yaya</button>
-        <button class="ptab" role="tab" type="button" data-p="3">STK</button>
-        <button class="ptab" role="tab" type="button" data-p="4">Kurum</button>
+        <button class="ptab is-active" role="tab" type="button" data-p="0" data-i18n="tab0">Kurye</button>
+        <button class="ptab" role="tab" type="button" data-p="1" data-i18n="tab1">Taksi</button>
+        <button class="ptab" role="tab" type="button" data-p="2" data-i18n="tab2">Yaya</button>
+        <button class="ptab" role="tab" type="button" data-p="3" data-i18n="tab3">STK</button>
+        <button class="ptab" role="tab" type="button" data-p="4" data-i18n="tab4">Kurum</button>
       </div>
 
       <div class="persona__cards">
         <article class="pcard is-active" data-p="0">
-          <span class="pcard__badge">Odak kitle</span>
+          <span class="pcard__badge" data-i18n="p0.badge">Odak kitle</span>
           <div class="pcard__media"><img src="Emare%20Box%201.png" alt=""></div>
           <div class="pcard__body">
-            <h4>Motokuryeler &amp; motovlogcular</h4>
-            <p>Kask kamerasıyla tüm gün trafikte. Camdan atılan çöpe en çok maruz kalan, en çok net görüntü yakalayan grup.</p>
+            <h4 data-i18n="p0.h">Motokuryeler &amp; motovlogcular</h4>
+            <p data-i18n="p0.p">Kask kamerasıyla tüm gün trafikte. Camdan atılan çöpe en çok maruz kalan, en çok net görüntü yakalayan grup.</p>
             <div class="pcard__stats">
-              <div><b>8-10 sa</b><span>Günlük kayıt</span></div>
-              <div><b>10 sn</b><span>Kırpılan an</span></div>
-              <div><b>Lider</b><span>Haftalık tablo</span></div>
+              <div><b data-i18n="p0.s1b">8-10 sa</b><span data-i18n="p0.s1l">Günlük kayıt</span></div>
+              <div><b data-i18n="p0.s2b">10 sn</b><span data-i18n="p0.s2l">Kırpılan an</span></div>
+              <div><b data-i18n="p0.s3b">Lider</b><span data-i18n="p0.s3l">Haftalık tablo</span></div>
             </div>
           </div>
         </article>
 
         <article class="pcard" data-p="1">
-          <span class="pcard__badge">Dashcam</span>
+          <span class="pcard__badge" data-i18n="p1.badge">Dashcam</span>
           <div class="pcard__media"><img src="Emare%20Hero.png" alt=""></div>
           <div class="pcard__body">
-            <h4>Taksiciler &amp; uzun yol şoförleri</h4>
-            <p>Araç kamerası zaten var, kayıt zaten dönüyor. Gün sonunda Wi-Fi ile telefona alınan klipler birkaç dokunuşla kanıta dönüşüyor.</p>
+            <h4 data-i18n="p1.h">Taksiciler &amp; uzun yol şoförleri</h4>
+            <p data-i18n="p1.p">Araç kamerası zaten var, kayıt zaten dönüyor. Gün sonunda Wi-Fi ile telefona alınan klipler birkaç dokunuşla kanıta dönüşüyor.</p>
             <div class="pcard__stats">
-              <div><b>3-5 dk</b><span>Kamera blokları</span></div>
-              <div><b>Otomatik</b><span>Konum okuma</span></div>
-              <div><b>Ek puan</b><span>Sürerken kazanç</span></div>
+              <div><b data-i18n="p1.s1b">3-5 dk</b><span data-i18n="p1.s1l">Kamera blokları</span></div>
+              <div><b data-i18n="p1.s2b">Otomatik</b><span data-i18n="p1.s2l">Konum okuma</span></div>
+              <div><b data-i18n="p1.s3b">Ek puan</b><span data-i18n="p1.s3l">Sürerken kazanç</span></div>
             </div>
           </div>
         </article>
 
         <article class="pcard" data-p="2">
-          <span class="pcard__badge">Anında kayıt</span>
+          <span class="pcard__badge" data-i18n="p2.badge">Anında kayıt</span>
           <div class="pcard__media"><img src="Emare%20Box%202.png" alt=""></div>
           <div class="pcard__body">
-            <h4>Yayalar &amp; mahalle sakinleri</h4>
-            <p>Uygulama açılır açılmaz kocaman bir "Hemen Kaydet" butonu. İhlal anı kaçmadan kamera saniyeler içinde devrede.</p>
+            <h4 data-i18n="p2.h">Yayalar &amp; mahalle sakinleri</h4>
+            <p data-i18n="p2.p">Uygulama açılır açılmaz kocaman bir "Hemen Kaydet" butonu. İhlal anı kaçmadan kamera saniyeler içinde devrede.</p>
             <div class="pcard__stats">
-              <div><b>1 dokunuş</b><span>Kamera açılışı</span></div>
-              <div><b>Harita</b><span>Yığın bildirimi</span></div>
-              <div><b>Ödül</b><span>Puan mağazası</span></div>
+              <div><b data-i18n="p2.s1b">1 dokunuş</b><span data-i18n="p2.s1l">Kamera açılışı</span></div>
+              <div><b data-i18n="p2.s2b">Harita</b><span data-i18n="p2.s2l">Yığın bildirimi</span></div>
+              <div><b data-i18n="p2.s3b">Ödül</b><span data-i18n="p2.s3l">Puan mağazası</span></div>
             </div>
           </div>
         </article>
 
         <article class="pcard" data-p="3">
-          <span class="pcard__badge">Gönüllü</span>
+          <span class="pcard__badge" data-i18n="p3.badge">Gönüllü</span>
           <div class="pcard__media"><img src="Emare%20Section%202.png" alt=""></div>
           <div class="pcard__body">
-            <h4>Çevre gönüllüleri &amp; STK'lar</h4>
-            <p>Haritadaki kırmızı pine gidip temizlik yapan gruplar, öncesi / sonrası çifte kanıtla normalin çok üzerinde EcoPuan kazanıyor.</p>
+            <h4 data-i18n="p3.h">Çevre gönüllüleri &amp; STK'lar</h4>
+            <p data-i18n="p3.p">Haritadaki kırmızı pine gidip temizlik yapan gruplar, öncesi / sonrası çifte kanıtla normalin çok üzerinde EcoPuan kazanıyor.</p>
             <div class="pcard__stats">
-              <div><b>Öncesi</b><span>+ sonrası kanıt</span></div>
-              <div><b>Yüksek</b><span>Puan çarpanı</span></div>
-              <div><b>Ekip</b><span>Grup rozetleri</span></div>
+              <div><b data-i18n="p3.s1b">Öncesi</b><span data-i18n="p3.s1l">+ sonrası kanıt</span></div>
+              <div><b data-i18n="p3.s2b">Yüksek</b><span data-i18n="p3.s2l">Puan çarpanı</span></div>
+              <div><b data-i18n="p3.s3b">Ekip</b><span data-i18n="p3.s3l">Grup rozetleri</span></div>
             </div>
           </div>
         </article>
 
         <article class="pcard" data-p="4">
-          <span class="pcard__badge">B2G panel</span>
+          <span class="pcard__badge" data-i18n="p4.badge">B2G panel</span>
           <div class="pcard__media"><img src="Emare%20Section%203.png" alt=""></div>
           <div class="pcard__body">
-            <h4>Zabıta, çevre polisi &amp; belediye</h4>
-            <p>Moderasyondan geçmiş, konumlu ve net kanıtlar tek panelde. Memur cezayı kendi resmi sisteminden yazar, panelde durumu işaretler.</p>
+            <h4 data-i18n="p4.h">Zabıta, çevre polisi &amp; belediye</h4>
+            <p data-i18n="p4.p">Moderasyondan geçmiş, konumlu ve net kanıtlar tek panelde. Memur cezayı kendi resmi sisteminden yazar, panelde durumu işaretler.</p>
             <div class="pcard__stats">
-              <div><b>2FA + IP</b><span>Erişim güvenliği</span></div>
-              <div><b>Isı haritası</b><span>Kavşak analizi</span></div>
-              <div><b>Daha az</b><span>Devriye maliyeti</span></div>
+              <div><b data-i18n="p4.s1b">2FA + IP</b><span data-i18n="p4.s1l">Erişim güvenliği</span></div>
+              <div><b data-i18n="p4.s2b">Isı haritası</b><span data-i18n="p4.s2l">Kavşak analizi</span></div>
+              <div><b data-i18n="p4.s3b">Daha az</b><span data-i18n="p4.s3l">Devriye maliyeti</span></div>
             </div>
           </div>
         </article>
@@ -302,27 +303,27 @@
 <section class="board" id="kanitlar">
   <div class="board__chalk" aria-hidden="true">
     <span style="top:9%;left:5%">♻</span>
-    <span style="top:20%;left:41%">EcoPuan +500</span>
+    <span style="top:20%;left:41%" data-i18n="chalk.points">EcoPuan +500</span>
     <span style="top:63%;left:7%">34 XX 123</span>
     <span style="top:80%;left:60%">GPS 41.02, 28.99</span>
-    <span style="top:13%;left:79%">pin ⚑</span>
-    <span style="top:47%;left:88%">10 sn</span>
+    <span style="top:13%;left:79%" data-i18n="chalk.pin">pin ⚑</span>
+    <span style="top:47%;left:88%" data-i18n="chalk.sec">10 sn</span>
     <span style="top:88%;left:31%">♻</span>
   </div>
 
   <div class="board__inner">
-    <figure class="polaroid p1"><img src="Emare%20Box%202.png" alt=""><figcaption>Selin, 24<br>Gönüllü — İzmir</figcaption></figure>
-    <figure class="polaroid p2"><img src="Emare%20Section%201.png" alt=""><figcaption>Izgara ağzı<br>Bildirildi</figcaption></figure>
-    <figure class="polaroid p3"><img src="Emare%20Section%202.png" alt=""><figcaption>Park yolu<br>Temizlendi</figcaption></figure>
-    <figure class="polaroid p4"><img src="Emare%20Box%201.png" alt=""><figcaption>Kanıt kaydı<br>10 sn kırpma</figcaption></figure>
-    <figure class="polaroid p5"><img src="Emare%20Section%203.png" alt=""><figcaption>Kurum paneli<br>İşlem yapıldı</figcaption></figure>
-    <figure class="polaroid p6"><img src="Emare%20Hero.png" alt=""><figcaption>Sahil bandı<br>Pilot bölge</figcaption></figure>
+    <figure class="polaroid p1"><img src="Emare%20Box%202.png" alt=""><figcaption data-i18n="pol1">Selin, 24<br>Gönüllü — İzmir</figcaption></figure>
+    <figure class="polaroid p2"><img src="Emare%20Section%201.png" alt=""><figcaption data-i18n="pol2">Izgara ağzı<br>Bildirildi</figcaption></figure>
+    <figure class="polaroid p3"><img src="Emare%20Section%202.png" alt=""><figcaption data-i18n="pol3">Park yolu<br>Temizlendi</figcaption></figure>
+    <figure class="polaroid p4"><img src="Emare%20Box%201.png" alt=""><figcaption data-i18n="pol4">Kanıt kaydı<br>10 sn kırpma</figcaption></figure>
+    <figure class="polaroid p5"><img src="Emare%20Section%203.png" alt=""><figcaption data-i18n="pol5">Kurum paneli<br>İşlem yapıldı</figcaption></figure>
+    <figure class="polaroid p6"><img src="Emare%20Hero.png" alt=""><figcaption data-i18n="pol6">Sahil bandı<br>Pilot bölge</figcaption></figure>
 
     <div class="board__note">
-      <h2 class="display">SAHADAN GELEN<br>KANITLAR</h2>
-      <p>Kimse ifşa edilmiyor, kimse hedef gösterilmiyor. Görüntü yalnızca yetkili kuruma gidiyor; geriye
+      <h2 class="display" data-i18n="board.title">SAHADAN GELEN<br>KANITLAR</h2>
+      <p data-i18n="board.p">Kimse ifşa edilmiyor, kimse hedef gösterilmiyor. Görüntü yalnızca yetkili kuruma gidiyor; geriye
       temizlenmiş bir sokak ve cebine yatan puan kalıyor.</p>
-      <a class="btn btn--green" href="#iletisim"><span>Bize Ulaşın</span></a>
+      <a class="btn btn--green" href="#iletisim"><span data-i18n="cta.contact">Bize Ulaşın</span></a>
     </div>
   </div>
 </section>
@@ -330,90 +331,90 @@
 <!-- ============ PLANLAR ============ -->
 <section class="section pricing" id="planlar">
   <div class="container">
-    <h2 class="display h2 reveal">KURUMLAR İÇİN ESNEK PLANLAR</h2>
-    <p class="lead lead--left reveal" style="--d:.08s">Lisans maliyetini ilk aydan çıkaran bir denetim ağı.</p>
+    <h2 class="display h2 reveal" data-i18n="price.title">KURUMLAR İÇİN ESNEK PLANLAR</h2>
+    <p class="lead lead--left reveal" style="--d:.08s" data-i18n="price.lead">Lisans maliyetini ilk aydan çıkaran bir denetim ağı.</p>
 
     <div class="plans">
       <article class="plan reveal">
         <div class="plan__box">
-          <span>ihbar</span><b>→</b><span>moderasyon</span><b>→</b><span>kurum</span>
-          <em>tek ilçe · 3 ay</em>
+          <span data-i18n="plan1.b1">ihbar</span><b>→</b><span data-i18n="plan1.b2">moderasyon</span><b>→</b><span data-i18n="plan1.b3">kurum</span>
+          <em data-i18n="plan1.b4">tek ilçe · 3 ay</em>
         </div>
-        <h3>Pilot Bölge</h3>
-        <p class="plan__for">Tek mahalle veya ilçede caydırıcılığı ölçmek isteyen belediyeler için.</p>
-        <div class="plan__price">₺0<small>/ 3 ay</small></div>
+        <h3 data-i18n="plan1.h">Pilot Bölge</h3>
+        <p class="plan__for" data-i18n="plan1.for">Tek mahalle veya ilçede caydırıcılığı ölçmek isteyen belediyeler için.</p>
+        <div class="plan__price" data-i18n="plan1.price">₺0<small>/ 3 ay</small></div>
         <ul class="plan__list">
-          <li>1 ilçe, aylık 500 kanıta kadar</li>
-          <li>Vatandaş mobil uygulaması</li>
-          <li>Harita modülü ve çöp yığını pinleri</li>
-          <li>Manuel moderasyon dahil</li>
-          <li>Aylık özet raporu</li>
-          <li class="sub">Lansman PR desteği ve mahalle bilgilendirme materyalleri</li>
+          <li data-i18n="plan1.f1">1 ilçe, aylık 500 kanıta kadar</li>
+          <li data-i18n="plan1.f2">Vatandaş mobil uygulaması</li>
+          <li data-i18n="plan1.f3">Harita modülü ve çöp yığını pinleri</li>
+          <li data-i18n="plan1.f4">Manuel moderasyon dahil</li>
+          <li data-i18n="plan1.f5">Aylık özet raporu</li>
+          <li class="sub" data-i18n="plan1.f6">Lansman PR desteği ve mahalle bilgilendirme materyalleri</li>
         </ul>
-        <div class="plan__foot"><span>Kurulum ücretsiz</span><a class="btn btn--green btn--sm" href="#iletisim"><span>Bize Ulaşın</span></a></div>
+        <div class="plan__foot"><span data-i18n="plan1.foot">Kurulum ücretsiz</span><a class="btn btn--green btn--sm" href="#iletisim"><span data-i18n="cta.contact">Bize Ulaşın</span></a></div>
       </article>
 
       <article class="plan plan--hot reveal" style="--d:.1s">
         <span class="plan__star" aria-hidden="true">★</span>
         <div class="plan__box">
-          <span>kanıt</span><b>→</b><span>ceza paneli</span><b>→</b><span>EcoPuan</span>
-          <em>tam B2G kurulum</em>
+          <span data-i18n="plan2.b1">kanıt</span><b>→</b><span data-i18n="plan2.b2">ceza paneli</span><b>→</b><span data-i18n="plan2.b3">EcoPuan</span>
+          <em data-i18n="plan2.b4">tam B2G kurulum</em>
         </div>
-        <h3>Belediye</h3>
-        <p class="plan__for">Zabıta ve çevre polisinin günlük operasyonuna giren tam sürüm.</p>
-        <div class="plan__price">₺24.900<small>/ ay</small></div>
+        <h3 data-i18n="plan2.h">Belediye</h3>
+        <p class="plan__for" data-i18n="plan2.for">Zabıta ve çevre polisinin günlük operasyonuna giren tam sürüm.</p>
+        <div class="plan__price" data-i18n="plan2.price">₺24.900<small>/ ay</small></div>
         <ul class="plan__list">
-          <li>Sınırsız kanıt yükleme</li>
-          <li>B2G resmi işlem paneli</li>
-          <li>2FA, IP kısıtlama, rol tabanlı erişim</li>
-          <li>EXIF / GPS çapraz doğrulama</li>
-          <li>Öncelikli moderasyon (4 saat)</li>
-          <li>Isı haritaları ve kavşak analizleri</li>
-          <li>EcoPuan ödül ağı entegrasyonu</li>
-          <li class="sub">Marka sponsorluklarıyla ödül havuzunun büyütülmesi</li>
+          <li data-i18n="plan2.f1">Sınırsız kanıt yükleme</li>
+          <li data-i18n="plan2.f2">B2G resmi işlem paneli</li>
+          <li data-i18n="plan2.f3">2FA, IP kısıtlama, rol tabanlı erişim</li>
+          <li data-i18n="plan2.f4">EXIF / GPS çapraz doğrulama</li>
+          <li data-i18n="plan2.f5">Öncelikli moderasyon (4 saat)</li>
+          <li data-i18n="plan2.f6">Isı haritaları ve kavşak analizleri</li>
+          <li data-i18n="plan2.f7">EcoPuan ödül ağı entegrasyonu</li>
+          <li class="sub" data-i18n="plan2.f8">Marka sponsorluklarıyla ödül havuzunun büyütülmesi</li>
         </ul>
-        <div class="plan__foot"><span>≈ ₺12 / işlenen kanıt</span><a class="btn btn--green btn--sm" href="#iletisim"><span>Bize Ulaşın</span></a></div>
+        <div class="plan__foot"><span data-i18n="plan2.foot">≈ ₺12 / işlenen kanıt</span><a class="btn btn--green btn--sm" href="#iletisim"><span data-i18n="cta.contact">Bize Ulaşın</span></a></div>
       </article>
 
       <article class="plan reveal" style="--d:.2s">
         <div class="plan__box">
-          <span>il geneli</span><b>→</b><span>API</span><b>→</b><span>DaaS rapor</span>
-          <em>çoklu kurum</em>
+          <span data-i18n="plan3.b1">il geneli</span><b>→</b><span>API</span><b>→</b><span data-i18n="plan3.b3">DaaS rapor</span>
+          <em data-i18n="plan3.b4">çoklu kurum</em>
         </div>
-        <h3>Metropol &amp; Bakanlık</h3>
-        <p class="plan__for">Birden çok ilçeyi tek çatıdan yöneten büyükşehir ve ulusal kurumlar için.</p>
-        <div class="plan__price">₺59.900<small>/ ay</small></div>
+        <h3 data-i18n="plan3.h">Metropol &amp; Bakanlık</h3>
+        <p class="plan__for" data-i18n="plan3.for">Birden çok ilçeyi tek çatıdan yöneten büyükşehir ve ulusal kurumlar için.</p>
+        <div class="plan__price" data-i18n="plan3.price">₺59.900<small>/ ay</small></div>
         <ul class="plan__list">
-          <li>Çoklu ilçe / il yönetimi</li>
-          <li>Kurum sistemlerine API entegrasyonu</li>
-          <li>Toplu yükleme portalı (kurye ve taksi filoları)</li>
-          <li>Şehir planlama ve DaaS raporları</li>
-          <li>Özel SLA ve 7/24 destek</li>
-          <li>Yerinde personel eğitimi</li>
-          <li>ESG / karbon raporlama altyapısı</li>
-          <li class="sub">Ulusal denetim ağı protokolleri için hukuki danışmanlık</li>
+          <li data-i18n="plan3.f1">Çoklu ilçe / il yönetimi</li>
+          <li data-i18n="plan3.f2">Kurum sistemlerine API entegrasyonu</li>
+          <li data-i18n="plan3.f3">Toplu yükleme portalı (kurye ve taksi filoları)</li>
+          <li data-i18n="plan3.f4">Şehir planlama ve DaaS raporları</li>
+          <li data-i18n="plan3.f5">Özel SLA ve 7/24 destek</li>
+          <li data-i18n="plan3.f6">Yerinde personel eğitimi</li>
+          <li data-i18n="plan3.f7">ESG / karbon raporlama altyapısı</li>
+          <li class="sub" data-i18n="plan3.f8">Ulusal denetim ağı protokolleri için hukuki danışmanlık</li>
         </ul>
-        <div class="plan__foot"><span>Ölçeğe göre teklif</span><a class="btn btn--green btn--sm" href="#iletisim"><span>Bize Ulaşın</span></a></div>
+        <div class="plan__foot"><span data-i18n="plan3.foot">Ölçeğe göre teklif</span><a class="btn btn--green btn--sm" href="#iletisim"><span data-i18n="cta.contact">Bize Ulaşın</span></a></div>
       </article>
     </div>
-    <p class="plans__note">Fiyatlar temsilidir; kurum ölçeği, ilçe sayısı ve beklenen kanıt hacmine göre belirlenir. Vatandaşlar için platform her koşulda ücretsizdir.</p>
+    <p class="plans__note" data-i18n="price.note">Fiyatlar temsilidir; kurum ölçeği, ilçe sayısı ve beklenen kanıt hacmine göre belirlenir. Vatandaşlar için platform her koşulda ücretsizdir.</p>
   </div>
 </section>
 
 <!-- ============ SON CTA ============ -->
 <section class="cta" id="iletisim">
   <div class="container">
-    <h2 class="display h2 reveal">SOKAĞINIZDA GERÇEK<br>BİR DEĞİŞİM GÖRÜN</h2>
-    <p class="lead lead--left reveal" style="--d:.08s">
+    <h2 class="display h2 reveal" data-i18n="cta.title">SOKAĞINIZDA GERÇEK<br>BİR DEĞİŞİM GÖRÜN</h2>
+    <p class="lead lead--left reveal" style="--d:.08s" data-i18n="cta.lead">
       Pilot bölge görüşmesi ücretsiz. Kurumunuz için 20 dakikalık bir demo yeter;
       ilk kanıtın panele düşmesi bir haftadan kısa sürüyor.
     </p>
     <div class="reveal" style="--d:.16s">
-      <a class="btn btn--green btn--lg" href="mailto:merhaba@Emare.app"><span>Bize Ulaşın</span></a>
+      <a class="btn btn--green btn--lg" href="mailto:merhaba@emare.app"><span data-i18n="cta.contact">Bize Ulaşın</span></a>
     </div>
   </div>
   <div class="cta__art">
-    <img src="Emare%20Bottom.png" alt="Parkta oturan Emare maskotu ve yanındaki kuş">
+    <img src="Emare%20Bottom.png" data-i18n-alt="alt.bottom" alt="Parkta oturan Emare maskotu ve yanındaki kuş">
   </div>
 </section>
 
@@ -443,21 +444,22 @@
       <a href="#" aria-label="E-posta"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></a>
     </div>
 
-    <a class="btn btn--white" href="mailto:merhaba@Emare.app"><span>Bize Ulaşın</span></a>
+    <a class="btn btn--white" href="mailto:merhaba@emare.app"><span data-i18n="cta.contact">Bize Ulaşın</span></a>
   </div>
 
   <div class="container footer__bottom">
-    <span>© 2026 Emare — Çöp Atma Tespit ve Ödüllendirme Platformu</span>
+    <span data-i18n="footer.copy">© 2026 Emare — Çöp Atma Tespit ve Ödüllendirme Platformu</span>
     <nav class="footer__links">
-      <a href="#sorun">Neden Emare</a>
-      <a href="#akis">Nasıl Çalışır</a>
-      <a href="#kimler">Kimler Kullanıyor</a>
-      <a href="#planlar">Kurumlar</a>
-      <a href="#">Gizlilik &amp; KVKK</a>
+      <a href="#sorun" data-i18n="nav.why">Neden Emare</a>
+      <a href="#akis" data-i18n="nav.how">Nasıl Çalışır</a>
+      <a href="#kimler" data-i18n="nav.who">Kimler Kullanıyor</a>
+      <a href="#planlar" data-i18n="nav.orgs">Kurumlar</a>
+      <a href="#" data-i18n="footer.privacy">Gizlilik &amp; KVKK</a>
     </nav>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

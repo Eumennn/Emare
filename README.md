@@ -5,7 +5,7 @@
 
 ## Demo
 
-Sayfa GitHub Pages üzerinde yayında: **https://KULLANICI.github.io/REPO/**
+Sayfa GitHub Pages üzerinde yayında: **https://eumennn.github.io/Emare/**
 
 ## Yerelde çalıştırma
 

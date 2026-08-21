@@ -390,6 +390,8 @@ html::-webkit-scrollbar,body::-webkit-scrollbar{width:0;height:0;display:none}
   will-change:opacity,transform;
 }
 .reveal.is-in{opacity:1;transform:none}
+/* Motion devredeyken gecisi o yurutur, CSS transition devre disi */
+.motion-on .reveal{transition:none}
 
 /* =========================================================
    PROBLEM + DECK

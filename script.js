@@ -238,18 +238,29 @@
 
   /* ---------- reveal on enter ---------- */
   var revealables = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduced) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-in');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-    revealables.forEach(function (el) { io.observe(el); });
+
+  function cssReveal() {
+    if ('IntersectionObserver' in window && !reduced) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealables.forEach(function (el) { io.observe(el); });
+    } else {
+      revealables.forEach(function (el) { el.classList.add('is-in'); });
+    }
+  }
+
+  /* Motion (motion.js) yuklenecekse reveal'i ona birak; yuklenemezse
+     oradaki bail() bu yedegi cagirir. */
+  if (window.EMARE_MOTION && window.EMARE_MOTION.pending) {
+    window.EMARE_MOTION.fallback = cssReveal;
   } else {
-    revealables.forEach(function (el) { el.classList.add('is-in'); });
+    cssReveal();
   }
 
   /* ---------- number counters ---------- */

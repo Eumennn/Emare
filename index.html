@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 
@@ -82,7 +82,7 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
   <div class="hero__media">
-    <img id="heroImg" src="Emare%20Hero.png" data-i18n-alt="alt.hero"
+    <img id="heroImg" src="Emare%20Hero.webp" data-i18n-alt="alt.hero"
          alt="Emare maskotu parkta çöp toplarken, arkada güvenlik kamerası ve temiz şehir tabelası">
     <div class="hero__scrim"></div>
   </div>
@@ -241,7 +241,7 @@
 
         <article class="pcard" data-p="1">
           <span class="pcard__badge" data-i18n="p1.badge">Dashcam</span>
-          <div class="pcard__media"><img src="Emare%20Hero.png" alt=""></div>
+          <div class="pcard__media"><img src="Emare%20Hero.webp" alt=""></div>
           <div class="pcard__body">
             <h4 data-i18n="p1.h">Taksiciler &amp; uzun yol şoförleri</h4>
             <p data-i18n="p1.p">Araç kamerası zaten var, kayıt zaten dönüyor. Gün sonunda Wi-Fi ile telefona alınan klipler birkaç dokunuşla kanıta dönüşüyor.</p>
@@ -317,7 +317,7 @@
     <figure class="polaroid p3"><img src="Emare%20Section%202.png" alt=""><figcaption data-i18n="pol3">Park yolu<br>Temizlendi</figcaption></figure>
     <figure class="polaroid p4"><img src="Emare%20Box%201.png" alt=""><figcaption data-i18n="pol4">Kanıt kaydı<br>10 sn kırpma</figcaption></figure>
     <figure class="polaroid p5"><img src="Emare%20Section%203.png" alt=""><figcaption data-i18n="pol5">Kurum paneli<br>İşlem yapıldı</figcaption></figure>
-    <figure class="polaroid p6"><img src="Emare%20Hero.png" alt=""><figcaption data-i18n="pol6">Sahil bandı<br>Pilot bölge</figcaption></figure>
+    <figure class="polaroid p6"><img src="Emare%20Hero.webp" alt=""><figcaption data-i18n="pol6">Sahil bandı<br>Pilot bölge</figcaption></figure>
 
     <div class="board__note">
       <h2 class="display" data-i18n="board.title">SAHADAN GELEN<br>KANITLAR</h2>
@@ -459,7 +459,17 @@
   </div>
 </footer>
 
-<script src="i18n.js?v=7"></script>
-<script src="script.js?v=7"></script>
+<!-- Motion (Framer Motion) devrede: reveal animasyonlarini o yurutur.
+     2.5 sn icinde yuklenemezse CSS yedegi otomatik calisir. -->
+<script>
+window.EMARE_MOTION = { pending: true };
+setTimeout(function () {
+  var m = window.EMARE_MOTION;
+  if (m && m.pending) { m.pending = false; if (typeof m.fallback === "function") m.fallback(); }
+}, 2500);
+</script>
+<script src="i18n.js?v=8"></script>
+<script src="script.js?v=8"></script>
+<script type="module" src="motion.js?v=1"></script>
 </body>
 </html>

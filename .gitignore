@@ -16,3 +16,6 @@ desktop.ini
 .DS_Store
 .vscode/
 .idea/
+
+# Yerel Claude Code ayarlari
+.claude/
